@@ -1,0 +1,179 @@
+:root {
+  --first-color: #eee;
+  --second-color: #222;
+  --third-color: #ccc;
+  --fourth-color: #ddd;
+  --fifth-color: #222;
+  --six-color: #111;
+  --sev-col: #000;
+}
+
+.darktheme {
+  --first-color: #222;
+  --second-color: #fff;
+  --third-color: #111;
+  --fourth-color: #000;
+  --fifth-color: #3f3fac;
+  --six-color: #6666ec;
+  --sev-col: #fff;
+}
+
+body {
+  background-color: var(--first-color);
+  color: var(--sev-col);
+
+}
+
+.crud {
+  width: 80%;
+  margin: auto;
+}
+
+.crud h1 {
+  text-align: center;
+  font-size: 2.5rem;
+
+}
+
+.crud img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.crud h3 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.form>div {
+  margin-bottom: 10px;
+}
+
+input,
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+input {
+  height: 40px;
+  color: var(--sev-col);
+  background-color: var(--third-color);
+  font-size: 1.3rem;
+}
+
+.title input,
+.count input,
+.category input,
+.search input {
+  width: 100%;
+}
+
+.total input {
+  width: 18%;
+  margin-right: .5%;
+}
+
+input ::placeholder {
+  font-size: 1.3rem;
+
+}
+
+button {
+  height: fit-content;
+  padding: 10px;
+  color: white;
+  background-color: var(--fifth-color);
+  font-size: 1.3rem;
+}
+
+.category button,
+.search>button {
+  width: 100%;
+}
+
+.search>div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 48% 48%;
+  gap: 4%;
+  margin-bottom: 10px;
+}
+
+.total label {
+  background-color: #ddd;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.output {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  place-content: center;
+}
+
+.output div {
+  padding: 10px;
+  border: 2px solid black;
+  border-top: none;
+  border-right: none;
+}
+
+.output:nth-child(1) {
+  border-top: 2px solid black;
+}
+
+.output :nth-child(10) {
+  border-right: 2px solid black;
+}
+
+
+
+@media (max-width:992px) {
+
+
+  .output {
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    border: 2px solid black;
+  }
+
+  .output div {
+    padding: 5px;
+    border: none;
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 1.8rem;
+  }
+
+  .output div button {
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    color: white;
+    background-color: var(--fifth-color);
+    font-size: 1.3rem;
+  }
+
+}
+
+@media (max-width:576px) {
+  .total input {
+    width: 24%;
+    padding: 0;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
